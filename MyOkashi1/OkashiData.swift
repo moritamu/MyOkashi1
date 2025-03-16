@@ -15,6 +15,12 @@ import SwiftUI
         }
     }
     private func search(keyword: String) async {
-        print("searchメソッドで受け取った値は \(keyword)")
+        guard let keyword_encode = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        else {
+            return
+        }
+        guard let req_url = URL(string: "https://sysbird.jp/toriko/api/?apikey=quest&format=json&keyword=\(keyword_encode)&max=10&order=r") else {
+            return
+        }
     }
 }
