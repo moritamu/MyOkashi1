@@ -15,7 +15,7 @@ import SwiftUI
             let url: URL?
             let image: URL?
         }
-        let items: [Item]?
+        let item: [Item]?
     }
     func searchOkashi(keyword: String) {
         print("searchOkashiメソッドで受け取った値は \(keyword)")
