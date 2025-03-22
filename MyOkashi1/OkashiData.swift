@@ -25,6 +25,7 @@ struct OkashiItem: Identifiable {
     }
 //お菓子のリスト
     var okashiList: [OkashiItem] = []
+    var okashiLink: URL?
 
     func searchOkashi(keyword: String) {
         print("searchOkashiメソッドで受け取った値は \(keyword)")
