@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-//    OkashiDataのインスタンス作成
+//    OkashiDataのインスタンス作成　OkashiDataを参照する変数
     var okashiDataList = OkashiData()
     @State var inputText = ""
     
