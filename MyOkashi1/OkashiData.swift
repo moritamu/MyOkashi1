@@ -6,7 +6,13 @@
 //
 
 import SwiftUI
-
+//identifiableプロトコルを利用してお菓子の情報をまとめる構造体
+struct OkashiItem: Identifiable {
+    var id = UUID()
+    let name: String
+    let link: URL
+    let image: URL
+}
 @Observable class OkashiData {
 //    JSONのデータ構造
     struct ResultJson: Codable {
@@ -17,6 +23,9 @@ import SwiftUI
         }
         let item: [Item]?
     }
+//お菓子のリスト
+    var okashiList: [OkashiItem] = []
+
     func searchOkashi(keyword: String) {
         print("searchOkashiメソッドで受け取った値は \(keyword)")
         Task {
