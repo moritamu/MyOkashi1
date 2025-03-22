@@ -60,6 +60,7 @@ struct OkashiItem: Identifiable {
                     okashiList.append(okashi)
                 }
             }
+            print(okashiList)
         } catch {
             print("エラーです。\(error)")
         }
